@@ -1,0 +1,426 @@
+
+module part3
+	(
+		CLOCK_50,						//	On Board 50 MHz
+		// Your inputs and outputs here
+        KEY,
+        SW,
+		// The ports below are for the VGA output.  Do not change.
+		VGA_CLK,   						//	VGA Clock
+		VGA_HS,							//	VGA H_SYNC
+		VGA_VS,							//	VGA V_SYNC
+		VGA_BLANK_N,						//	VGA BLANK
+		VGA_SYNC_N,						//	VGA SYNC
+		VGA_R,   						//	VGA Red[9:0]
+		VGA_G,	 						//	VGA Green[9:0]
+		VGA_B   						//	VGA Blue[9:0]
+	);
+
+	input			CLOCK_50;				//	50 MHz
+	input   [9:7]   SW;
+	input   [1:0]   KEY;
+
+	// Declare your inputs and outputs here
+	// Do not change the following outputs
+	output			VGA_CLK;   				//	VGA Clock
+	output			VGA_HS;					//	VGA H_SYNC
+	output			VGA_VS;					//	VGA V_SYNC
+	output			VGA_BLANK_N;				//	VGA BLANK
+	output			VGA_SYNC_N;				//	VGA SYNC
+	output	[9:0]	VGA_R;   				//	VGA Red[9:0]
+	output	[9:0]	VGA_G;	 				//	VGA Green[9:0]
+	output	[9:0]	VGA_B;   				//	VGA Blue[9:0]
+	
+	wire resetn;
+	assign resetn = KEY[0];
+	
+	// Create the colour, x, y and writeEn wires that are inputs to the controller.
+	wire [2:0] colour;
+	wire [7:0] x;
+	wire [6:0] y;
+	wire writeEn, erase, enable;
+	wire [3:0] counter;
+	wire [14:0] data_xy;
+
+	// Create an Instance of a VGA controller - there can be only one!
+	// Define the number of colours as well as the initial background
+	// image file (.MIF) for the controller.
+	vga_adapter VGA(
+			.resetn(resetn),
+			.clock(CLOCK_50),
+			.colour(colour),
+			.x(x),
+			.y(y),
+			.plot(writeEn),
+			/* Signals for the DAC to drive the monitor. */
+			.VGA_R(VGA_R),
+			.VGA_G(VGA_G),
+			.VGA_B(VGA_B),
+			.VGA_HS(VGA_HS),
+			.VGA_VS(VGA_VS),
+			.VGA_BLANK(VGA_BLANK_N),
+			.VGA_SYNC(VGA_SYNC_N),
+			.VGA_CLK(VGA_CLK));
+		defparam VGA.RESOLUTION = "160x120";
+		defparam VGA.MONOCHROME = "FALSE";
+		defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
+		defparam VGA.BACKGROUND_IMAGE = "black.mif";
+			
+	// Put your code here. Your code should produce signals x,y,colour and writeEn/plot
+	// for the VGA controller, in addition to any other functionality your design may require.
+	assign x = data_xy[14:7];
+	assign y = data_xy[6:0];
+    
+   // Instansiate datapath
+	datapath d0(
+				.clk(CLOCK_50), 
+				.resetn(resetn), 
+				.color_in(SW[9:7]),
+				.erase(erase),
+				.enable(enable),
+				.counter(counter), 
+				.data_xy(data_xy), 
+				.color(colour)
+	);
+
+   // Instansiate FSM control
+   control c0(
+				.clk(CLOCK_50), 
+				.resetn(resetn), 
+				.paint(~KEY[1]), 
+				.counter(counter),
+				.erase(erase),
+				.enable(enable),
+				.writeEn(writeEn)
+	);
+    
+endmodule
+                
+
+module control(
+    input clk,
+    input resetn,
+	 input paint,
+
+	 output [3:0] counter,
+	 output reg erase,
+	 output reg enable,
+	 output reg writeEn
+    );
+
+    reg [2:0] current_state, next_state;
+	 reg en, reset_counter; 
+	 wire [19:0] c0;
+	 wire frame_enable;
+	 wire [3:0] f_counter;
+    
+    localparam  S_WAIT        = 3'd0,
+                S_WAIT_WAIT   = 3'd1,
+                S_PAINT       = 3'd2,
+                S_RESET_COUNTER  = 3'd3,
+                S_ERASE       = 3'd4,
+					 S_UPDATE	   = 3'd5,
+					 S_COUNT_FRAMES  = 3'd6;
+
+    
+    // Next state logic aka our state table
+    always@(*)
+    begin: state_table 
+            case (current_state)
+                S_WAIT: next_state = paint ? S_WAIT_WAIT : S_WAIT;
+					 S_WAIT_WAIT: next_state = paint ? S_WAIT_WAIT : S_PAINT; 
+                S_PAINT: next_state = (counter == 4'b1111) ? S_RESET_COUNTER : S_PAINT;
+					 S_RESET_COUNTER: next_state = S_COUNT_FRAMES;
+					 S_COUNT_FRAMES: next_state = (f_counter == 4'b1111) ? S_ERASE : S_COUNT_FRAMES;
+                S_ERASE: next_state = (counter == 4'b1111) ? S_UPDATE : S_ERASE; 
+                S_UPDATE: next_state =  S_PAINT;
+            default:	next_state = S_WAIT;
+        endcase
+    end // state_table
+	 	 
+	 counter4 ct0(en, resetn, clk, counter);
+	 
+	 delay_counter dc0(clk, reset_counter, c0);
+	 assign frame_enable = (c0 == 0) ? 1 : 0;
+	 
+	 frame_counter fc0(frame_enable, clk, reset_counter, f_counter);
+
+    // Output logic aka all of our datapath control signals
+    always @(*)
+    begin: enable_signals
+        en = 1'b0;
+		  writeEn = 1'b0;
+		  enable = 1'b0;
+		  erase = 1'b0;
+		  reset_counter = resetn;
+
+        case (current_state)
+            S_PAINT: begin
+                en = 1'b1;
+					 writeEn = 1'b1;
+                end
+            S_RESET_COUNTER: begin
+					 reset_counter = 1'b0;
+                end
+            S_ERASE: begin 
+					 en = 1'b1;
+					 writeEn = 1'b1;
+					 erase = 1'b1;
+					 end
+				S_UPDATE: begin 
+					 enable = 1'b1;
+					 end
+        // default:    // don't need default since we already made sure all of our outputs were assigned a value at the start of the always block
+        endcase
+    end // enable_signals
+   
+    // current_state registers
+    always@(posedge clk)
+    begin: state_FFs
+        if(!resetn)
+            current_state <= S_WAIT;
+        else
+            current_state <= next_state;
+    end // state_FFS
+endmodule
+
+
+module datapath(
+    input clk,
+    input resetn,
+	 input [2:0] color_in, 
+    input erase,
+	 input enable,
+	 input [3:0] counter,
+    output reg [14:0] data_xy,
+	 output reg [2:0] color
+    );
+    
+    reg [7:0] x1;
+	 reg [6:0] y1;
+	 reg v_direction, h_direction;
+	 
+	 wire [7:0] x;
+	 wire [6:0] y;
+    
+	always @(*)
+    begin
+		if(!resetn)
+			color <= 3'd0;
+		else
+			color <= (erase) ? 3'd0 : color_in;
+	 end
+
+	// Register vertival direction
+	always@(posedge clk)
+	begin
+		if(!resetn)
+			v_direction <= 1'b1;
+		else
+			begin
+				if(v_direction == 1'b1)
+					begin
+						if(y + 4 > 7'd119)
+							v_direction <= 1'b0;
+					end
+				else
+					begin
+						if(y == 7'd0)
+							v_direction <= 1'b1;
+					end
+			end
+	end
+
+	// Register horizontal direction
+	always@(posedge clk)
+	begin
+		if(!resetn)
+			h_direction <= 1'b1;
+		else
+			begin
+				if(h_direction == 1'b1)
+					begin
+						if(x + 4 > 8'd159)
+							h_direction <= 1'b0;
+					end
+				else
+					begin
+						if(x == 8'd0)
+							h_direction <= 1'b1;
+					end
+			end
+	end
+	
+	x_counter xc0(clk, enable, resetn, h_direction, x);
+	y_counter yc0(clk, enable, resetn, v_direction, y);
+	 
+    // coordinate for x, y
+    always @(*)
+    begin
+		x1 = x + counter[1:0];
+		y1 = y + counter[3:2];
+		data_xy = {x1, y1};
+	 end
+
+endmodule
+
+
+module counter4(en, resetn, clk, out);
+	input en, resetn, clk;
+	output [3:0] out;
+	wire w0, w1, w2;
+	
+	assign w0 = en & out[0];
+	assign w1 = w0 & out[1];
+	assign w2 = w1 & out[2];
+	
+	my_tff t0(en, clk, resetn, out[0]);
+	my_tff t1(w0, clk, resetn, out[1]);
+	my_tff t2(w1, clk, resetn, out[2]);
+	my_tff t3(w2, clk, resetn, out[3]);
+	
+endmodule  
+
+
+module my_tff(t, clk, clear_b, q);
+	input clk, clear_b, t;
+	output q;
+	
+	reg q;
+	
+	always @(posedge clk, negedge clear_b)
+	begin
+		if (clear_b == 1'b0)
+			q <= 0;
+		else if (t == 1'b1)
+			q <= ~q;
+	end
+	
+endmodule 
+
+
+module delay_counter(clk, reset_n, q);
+	input clk, reset_n;
+	output q;
+	reg [19:0] q;
+	
+	always @(posedge clk)
+	begin
+		if (reset_n == 1'b0)
+			q <= 20'd833332;
+		else
+			begin
+				if (q == 0)
+					q <= 20'd833332;
+				else
+					q <= q - 1'b1;
+			end
+	end
+
+endmodule
+
+
+module frame_counter(enable, clk, reset_n, q);
+	input enable, clk, reset_n;
+	output reg [3:0] q;
+	
+	always @(posedge clk)
+	begin
+		if (reset_n == 1'b0)
+			q <= 4'd0;
+		else if (enable == 1'b1)
+			begin
+				if (q == 4'b1111)
+					q <= 4'd0;
+				else
+					q <= q + 1'b1;
+			end
+	end
+
+endmodule 
+
+
+module x_counter(clk, enable, resetn, updown, q);
+	input clk, enable, resetn, updown;
+	output reg [7:0] q;
+
+	always@(posedge clk)
+	begin
+		if(!resetn)
+			q <= 8'd0;
+		else if(enable)
+			begin
+				if(updown)
+					q <= q + 1'b1;
+				else
+					q <= q - 1'b1;
+			end
+	end
+
+endmodule
+
+
+module y_counter(clk, enable, resetn, updown, q);
+	input clk, enable, resetn, updown;
+	output reg [6:0] q;
+
+	always@(posedge clk)
+	begin
+		if(!resetn)
+			q <= 7'd60;
+		else if(enable)
+			begin
+				if(updown)
+					q <= q + 1'b1;
+				else
+					q <= q - 1'b1;
+			end
+	end
+	
+endmodule
+
+
+//module combination(CLOCK_50,						
+//        KEY,
+//        SW);
+//	input			CLOCK_50;	
+//	input   [9:7]   SW;
+//	input   [1:0]   KEY;
+//	
+//	wire resetn;
+//	assign resetn = KEY[0];
+//	
+//	wire [2:0] colour;
+//	wire [7:0] x;
+//	wire [6:0] y;
+//	wire writeEn, erase, enable;
+//	wire [3:0] counter;
+//	wire [14:0] data_xy;
+//	
+//	assign x = data_xy[14:7];
+//	assign y = data_xy[6:0];
+//    
+//   // Instansiate datapath
+//	datapath d0(
+//				.clk(CLOCK_50), 
+//				.resetn(resetn), 
+//				.color_in(SW[9:7]),
+//				.erase(erase),
+//				.enable(enable),
+//				.counter(counter), 
+//				.data_xy(data_xy), 
+//				.color(colour)
+//	);
+//
+//   // Instansiate FSM control
+//   control c0(
+//				.clk(CLOCK_50), 
+//				.resetn(resetn), 
+//				.paint(~KEY[1]), 
+//				.counter(counter),
+//				.erase(erase),
+//				.enable(enable),
+//				.writeEn(writeEn)
+//	);
+//
+//endmodule

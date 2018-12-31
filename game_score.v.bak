@@ -1,0 +1,14 @@
+
+module game_score(clk, resetn, score_pipe, score);
+	input clk, resetn, score_pipe;
+	output reg score;
+	
+	always @(posedge clk, posedge score_pipe)
+	begin
+		if (!resetn)
+			score <= 0;
+		else if (score_pipe)
+			score <= score + 1;
+	end
+
+endmodule 

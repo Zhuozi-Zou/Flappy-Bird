@@ -1,0 +1,17 @@
+
+State Machine - |project|control:c0|current_state
+Name current_state.S_DRAW_BLANK current_state.S_GAME_OVER current_state.S_UPDATE_BIRD current_state.S_ERASE_BIRD current_state.S_ERASE_APPLES current_state.S_DRAW_BIRD current_state.S_DRAW_PIPES current_state.S_COUNT_FRAMES current_state.S_UPDATE current_state.S_ERASE_PIPES current_state.S_RESET_COUNTER current_state.S_DRAW_APPLES current_state.S_NOTHING current_state.S_WAIT 
+current_state.S_WAIT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.S_NOTHING 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.S_DRAW_APPLES 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.S_RESET_COUNTER 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.S_ERASE_PIPES 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.S_UPDATE 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.S_COUNT_FRAMES 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.S_DRAW_PIPES 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.S_DRAW_BIRD 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.S_ERASE_APPLES 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.S_ERASE_BIRD 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.S_UPDATE_BIRD 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_GAME_OVER 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.S_DRAW_BLANK 1 0 0 0 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,869 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : -5.096
+TNS   : -49.292
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -4.960
+TNS   : -648.856
+
+Type  : Slow 1100mV 85C Model Setup 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : -4.873
+TNS   : -56.015
+
+Type  : Slow 1100mV 85C Model Setup 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : -4.264
+TNS   : -53.359
+
+Type  : Slow 1100mV 85C Model Setup 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : -3.859
+TNS   : -54.947
+
+Type  : Slow 1100mV 85C Model Setup 'datapath:d0|display_apples:da0|eat1'
+Slack : -1.984
+TNS   : -27.947
+
+Type  : Slow 1100mV 85C Model Setup 'datapath:d0|display_apples:da0|eat2'
+Slack : -1.967
+TNS   : -23.930
+
+Type  : Slow 1100mV 85C Model Setup 'datapath:d0|display_apples:da0|eat3'
+Slack : -1.812
+TNS   : -26.520
+
+Type  : Slow 1100mV 85C Model Setup 'datapath:d0|display_apples:da0|eat4'
+Slack : -1.796
+TNS   : -21.657
+
+Type  : Slow 1100mV 85C Model Setup 'datapath:d0|enable_randomy'
+Slack : -1.352
+TNS   : -14.981
+
+Type  : Slow 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 34.519
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : -0.048
+TNS   : -0.048
+
+Type  : Slow 1100mV 85C Model Hold 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'datapath:d0|display_apples:da0|eat1'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'datapath:d0|display_apples:da0|eat4'
+Slack : 0.365
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : 0.369
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'datapath:d0|display_apples:da0|eat3'
+Slack : 0.370
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'datapath:d0|display_apples:da0|eat2'
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : 0.373
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : 0.373
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.435
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'datapath:d0|enable_randomy'
+Slack : 0.637
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : -4.965
+TNS   : -92.359
+
+Type  : Slow 1100mV 85C Model Recovery 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : -4.881
+TNS   : -89.833
+
+Type  : Slow 1100mV 85C Model Recovery 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : -4.354
+TNS   : -101.920
+
+Type  : Slow 1100mV 85C Model Recovery 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : -4.028
+TNS   : -83.918
+
+Type  : Slow 1100mV 85C Model Recovery 'datapath:d0|enable_randomy'
+Slack : -3.683
+TNS   : -43.466
+
+Type  : Slow 1100mV 85C Model Recovery 'datapath:d0|display_apples:da0|eat4'
+Slack : -3.527
+TNS   : -52.786
+
+Type  : Slow 1100mV 85C Model Recovery 'datapath:d0|display_apples:da0|eat1'
+Slack : -3.306
+TNS   : -56.075
+
+Type  : Slow 1100mV 85C Model Recovery 'datapath:d0|display_apples:da0|eat3'
+Slack : -3.204
+TNS   : -57.623
+
+Type  : Slow 1100mV 85C Model Recovery 'datapath:d0|display_apples:da0|eat2'
+Slack : -3.188
+TNS   : -44.482
+
+Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
+Slack : 18.297
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
+Slack : 0.551
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : 1.623
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : 2.033
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'datapath:d0|display_apples:da0|eat2'
+Slack : 2.430
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : 2.442
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'datapath:d0|display_apples:da0|eat3'
+Slack : 2.529
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'datapath:d0|enable_randomy'
+Slack : 2.582
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'datapath:d0|display_apples:da0|eat1'
+Slack : 2.642
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : 2.690
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'datapath:d0|display_apples:da0|eat4'
+Slack : 2.909
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : -0.394
+TNS   : -10.998
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat3'
+Slack : -0.394
+TNS   : -10.967
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : -0.394
+TNS   : -10.273
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat1'
+Slack : -0.394
+TNS   : -9.315
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : -0.394
+TNS   : -9.063
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat2'
+Slack : -0.394
+TNS   : -8.449
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : -0.394
+TNS   : -8.203
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat4'
+Slack : -0.394
+TNS   : -8.160
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'datapath:d0|enable_randomy'
+Slack : -0.394
+TNS   : -6.951
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.881
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.773
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : -5.026
+TNS   : -48.747
+
+Type  : Slow 1100mV 0C Model Setup 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : -4.912
+TNS   : -56.716
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -4.890
+TNS   : -605.008
+
+Type  : Slow 1100mV 0C Model Setup 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : -4.294
+TNS   : -53.880
+
+Type  : Slow 1100mV 0C Model Setup 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : -3.853
+TNS   : -55.621
+
+Type  : Slow 1100mV 0C Model Setup 'datapath:d0|display_apples:da0|eat1'
+Slack : -2.036
+TNS   : -28.245
+
+Type  : Slow 1100mV 0C Model Setup 'datapath:d0|display_apples:da0|eat2'
+Slack : -1.951
+TNS   : -23.288
+
+Type  : Slow 1100mV 0C Model Setup 'datapath:d0|display_apples:da0|eat3'
+Slack : -1.903
+TNS   : -27.509
+
+Type  : Slow 1100mV 0C Model Setup 'datapath:d0|display_apples:da0|eat4'
+Slack : -1.870
+TNS   : -22.334
+
+Type  : Slow 1100mV 0C Model Setup 'datapath:d0|enable_randomy'
+Slack : -1.337
+TNS   : -14.668
+
+Type  : Slow 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 34.570
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : -0.227
+TNS   : -1.211
+
+Type  : Slow 1100mV 0C Model Hold 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : 0.082
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'datapath:d0|display_apples:da0|eat1'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'datapath:d0|display_apples:da0|eat4'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : 0.364
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'datapath:d0|display_apples:da0|eat3'
+Slack : 0.365
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : 0.367
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'datapath:d0|display_apples:da0|eat2'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : 0.368
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.396
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'datapath:d0|enable_randomy'
+Slack : 0.616
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : -5.039
+TNS   : -95.667
+
+Type  : Slow 1100mV 0C Model Recovery 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : -4.909
+TNS   : -91.222
+
+Type  : Slow 1100mV 0C Model Recovery 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : -4.473
+TNS   : -104.077
+
+Type  : Slow 1100mV 0C Model Recovery 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : -4.131
+TNS   : -85.801
+
+Type  : Slow 1100mV 0C Model Recovery 'datapath:d0|enable_randomy'
+Slack : -3.769
+TNS   : -45.022
+
+Type  : Slow 1100mV 0C Model Recovery 'datapath:d0|display_apples:da0|eat4'
+Slack : -3.616
+TNS   : -54.102
+
+Type  : Slow 1100mV 0C Model Recovery 'datapath:d0|display_apples:da0|eat1'
+Slack : -3.404
+TNS   : -57.727
+
+Type  : Slow 1100mV 0C Model Recovery 'datapath:d0|display_apples:da0|eat3'
+Slack : -3.303
+TNS   : -59.398
+
+Type  : Slow 1100mV 0C Model Recovery 'datapath:d0|display_apples:da0|eat2'
+Slack : -3.301
+TNS   : -46.070
+
+Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
+Slack : 18.357
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
+Slack : 0.508
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : 1.715
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : 2.109
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'datapath:d0|display_apples:da0|eat2'
+Slack : 2.536
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : 2.570
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'datapath:d0|display_apples:da0|eat3'
+Slack : 2.626
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'datapath:d0|enable_randomy'
+Slack : 2.700
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'datapath:d0|display_apples:da0|eat1'
+Slack : 2.735
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : 2.786
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'datapath:d0|display_apples:da0|eat4'
+Slack : 2.998
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat3'
+Slack : -0.394
+TNS   : -10.810
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : -0.394
+TNS   : -10.616
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : -0.394
+TNS   : -9.957
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat1'
+Slack : -0.394
+TNS   : -9.223
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : -0.394
+TNS   : -9.210
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat2'
+Slack : -0.394
+TNS   : -8.352
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : -0.394
+TNS   : -8.295
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat4'
+Slack : -0.394
+TNS   : -8.002
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'datapath:d0|enable_randomy'
+Slack : -0.394
+TNS   : -6.914
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.833
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.759
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -3.556
+TNS   : -451.139
+
+Type  : Fast 1100mV 85C Model Setup 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : -2.714
+TNS   : -23.031
+
+Type  : Fast 1100mV 85C Model Setup 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : -2.618
+TNS   : -25.540
+
+Type  : Fast 1100mV 85C Model Setup 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : -2.099
+TNS   : -24.385
+
+Type  : Fast 1100mV 85C Model Setup 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : -1.929
+TNS   : -24.521
+
+Type  : Fast 1100mV 85C Model Setup 'datapath:d0|display_apples:da0|eat2'
+Slack : -0.901
+TNS   : -11.263
+
+Type  : Fast 1100mV 85C Model Setup 'datapath:d0|display_apples:da0|eat1'
+Slack : -0.874
+TNS   : -12.289
+
+Type  : Fast 1100mV 85C Model Setup 'datapath:d0|display_apples:da0|eat3'
+Slack : -0.695
+TNS   : -10.059
+
+Type  : Fast 1100mV 85C Model Setup 'datapath:d0|display_apples:da0|eat4'
+Slack : -0.666
+TNS   : -7.882
+
+Type  : Fast 1100mV 85C Model Setup 'datapath:d0|enable_randomy'
+Slack : -0.601
+TNS   : -6.367
+
+Type  : Fast 1100mV 85C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 36.587
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : 0.094
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'datapath:d0|display_apples:da0|eat1'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'datapath:d0|display_apples:da0|eat2'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'datapath:d0|display_apples:da0|eat3'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'datapath:d0|display_apples:da0|eat4'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.244
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'datapath:d0|enable_randomy'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : -2.627
+TNS   : -49.908
+
+Type  : Fast 1100mV 85C Model Recovery 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : -2.580
+TNS   : -49.471
+
+Type  : Fast 1100mV 85C Model Recovery 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : -2.369
+TNS   : -55.807
+
+Type  : Fast 1100mV 85C Model Recovery 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : -2.054
+TNS   : -45.364
+
+Type  : Fast 1100mV 85C Model Recovery 'datapath:d0|enable_randomy'
+Slack : -1.838
+TNS   : -20.604
+
+Type  : Fast 1100mV 85C Model Recovery 'datapath:d0|display_apples:da0|eat4'
+Slack : -1.731
+TNS   : -25.892
+
+Type  : Fast 1100mV 85C Model Recovery 'datapath:d0|display_apples:da0|eat1'
+Slack : -1.545
+TNS   : -26.192
+
+Type  : Fast 1100mV 85C Model Recovery 'datapath:d0|display_apples:da0|eat3'
+Slack : -1.485
+TNS   : -26.717
+
+Type  : Fast 1100mV 85C Model Recovery 'datapath:d0|display_apples:da0|eat2'
+Slack : -1.481
+TNS   : -20.652
+
+Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
+Slack : 18.888
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : 0.945
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : 1.145
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'datapath:d0|display_apples:da0|eat2'
+Slack : 1.174
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'datapath:d0|display_apples:da0|eat3'
+Slack : 1.244
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'datapath:d0|enable_randomy'
+Slack : 1.254
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'datapath:d0|display_apples:da0|eat1'
+Slack : 1.306
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : 1.383
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'datapath:d0|display_apples:da0|eat4'
+Slack : 1.457
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : 1.480
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat3'
+Slack : 0.007
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat2'
+Slack : 0.020
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat1'
+Slack : 0.060
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : 0.071
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : 0.087
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:d0|enable_randomy'
+Slack : 0.088
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat4'
+Slack : 0.091
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : 0.113
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.807
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.890
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -3.035
+TNS   : -367.872
+
+Type  : Fast 1100mV 0C Model Setup 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : -2.469
+TNS   : -20.462
+
+Type  : Fast 1100mV 0C Model Setup 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : -2.392
+TNS   : -22.955
+
+Type  : Fast 1100mV 0C Model Setup 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : -1.956
+TNS   : -21.859
+
+Type  : Fast 1100mV 0C Model Setup 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : -1.763
+TNS   : -21.908
+
+Type  : Fast 1100mV 0C Model Setup 'datapath:d0|display_apples:da0|eat2'
+Slack : -0.792
+TNS   : -9.705
+
+Type  : Fast 1100mV 0C Model Setup 'datapath:d0|display_apples:da0|eat1'
+Slack : -0.786
+TNS   : -10.819
+
+Type  : Fast 1100mV 0C Model Setup 'datapath:d0|display_apples:da0|eat3'
+Slack : -0.641
+TNS   : -9.010
+
+Type  : Fast 1100mV 0C Model Setup 'datapath:d0|display_apples:da0|eat4'
+Slack : -0.612
+TNS   : -7.050
+
+Type  : Fast 1100mV 0C Model Setup 'datapath:d0|enable_randomy'
+Slack : -0.496
+TNS   : -5.167
+
+Type  : Fast 1100mV 0C Model Setup 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 36.973
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.077
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : 0.079
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'datapath:d0|display_apples:da0|eat1'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'datapath:d0|display_apples:da0|eat3'
+Slack : 0.129
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : 0.129
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'datapath:d0|display_apples:da0|eat4'
+Slack : 0.130
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'datapath:d0|display_apples:da0|eat2'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.216
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'datapath:d0|enable_randomy'
+Slack : 0.272
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : -2.494
+TNS   : -47.893
+
+Type  : Fast 1100mV 0C Model Recovery 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : -2.490
+TNS   : -48.368
+
+Type  : Fast 1100mV 0C Model Recovery 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : -2.250
+TNS   : -54.068
+
+Type  : Fast 1100mV 0C Model Recovery 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : -2.011
+TNS   : -44.159
+
+Type  : Fast 1100mV 0C Model Recovery 'datapath:d0|enable_randomy'
+Slack : -1.759
+TNS   : -20.187
+
+Type  : Fast 1100mV 0C Model Recovery 'datapath:d0|display_apples:da0|eat4'
+Slack : -1.665
+TNS   : -24.905
+
+Type  : Fast 1100mV 0C Model Recovery 'datapath:d0|display_apples:da0|eat1'
+Slack : -1.509
+TNS   : -25.601
+
+Type  : Fast 1100mV 0C Model Recovery 'datapath:d0|display_apples:da0|eat3'
+Slack : -1.459
+TNS   : -26.249
+
+Type  : Fast 1100mV 0C Model Recovery 'datapath:d0|display_apples:da0|eat2'
+Slack : -1.454
+TNS   : -20.291
+
+Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
+Slack : 18.972
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : 1.010
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'datapath:d0|display_apples:da0|eat2'
+Slack : 1.169
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : 1.198
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'datapath:d0|display_apples:da0|eat3'
+Slack : 1.225
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'datapath:d0|enable_randomy'
+Slack : 1.248
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'datapath:d0|display_apples:da0|eat1'
+Slack : 1.281
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : 1.420
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'datapath:d0|display_apples:da0|eat4'
+Slack : 1.432
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : 1.503
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat3'
+Slack : 0.039
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat2'
+Slack : 0.050
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat1'
+Slack : 0.087
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe3:lsp3|q[0]'
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe4:lsp4|q[0]'
+Slack : 0.094
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:d0|display_apples:da0|eat4'
+Slack : 0.103
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:d0|enable_randomy'
+Slack : 0.105
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe1:lsp1|q[0]'
+Slack : 0.122
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'datapath:d0|lest_shift_pipe2:lsp2|q[0]'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.800
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk'
+Slack : 18.888
+TNS   : 0.000
+
+------------------------------------------------------------
